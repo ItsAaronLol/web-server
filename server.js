@@ -21,7 +21,7 @@ app.use(middleware.logger); //causes middleware.logger to be called for every pa
 //app.use(middleware.requireAuthentication); //get called for every page requests and every route hit
 
 app.get('/about', middleware.requireAuthentication, function (req, res){
-	res.send('About Us');
+	res.send('About Us!');
 });
 
 app.use(express.static(__dirname + '/public')); //static takes the folder you want to expose
