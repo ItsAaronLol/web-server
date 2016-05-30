@@ -4,17 +4,8 @@ var PORT = 3000;
 //when you use uppercase for a variable name in java script, you're saying that the variable's value shouldnt be changed
 //'the root defaults to index.html'
 
-var middleware = {
-	requireAuthentication: function(req, res, next){
-		console.log('private route hit!');
-		next();
-	},
-	logger: function(req, res, next){
-		console.log('Request: ' + new Date().toString() + ' ' + req.method + ' ' + req.originalUrl);
-		next();
-	}
+var middleware = require('./middleware.js');
 
-};
 
 app.use(middleware.logger); //causes middleware.logger to be called for every page requested and every route hit
 
