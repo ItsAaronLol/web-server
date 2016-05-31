@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 3000; //if there is no process.evn.port use 3000
 //when you use uppercase for a variable name in java script, you're saying that the variable's value shouldnt be changed
 //'the root defaults to index.html'
 
